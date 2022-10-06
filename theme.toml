@@ -1,17 +1,16 @@
 name = "Hugo Minimalist"
 license = "BSD-3-clause"
 licenselink = "https://github.com/aniolm9/hugo-minimalist/blob/main/LICENSE"
-description = ""
+description = "A minimalist personal theme for Hugo."
 homepage = "https://github.com/aniolm9/hugo-minimalist"
-tags = []
-features = []
-min_version = "0.41.0"
+tags = ["blog", "clean", "minimal", "personal", "responsive", "resume", "simple"]
+features = ["responsive", "simple"]
+min_version = "0.80.0"
 
 [author]
   name = "Aniol Martí"
   homepage = "https://aniolmarti.cat"
 
-# If porting an existing theme
 [original]
   name = "minimalist"
   homepage = "https://www.bodunhu.com/minimalist/"
