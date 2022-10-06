@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Params.lang | default "en-US" }}">
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+          {{- partial "header.html" . -}}
+        <div class="sidebar-footer">
+          {{- partial "footer.html" . -}}
+        </div>
+      </div>
+      <section>
+        {{- block "main" . }}{{- end }}
+      </section>
+      <footer>
+        {{- partial "footer.html" . -}}
+      </footer>
+    </div>
+  </body>
+</html>

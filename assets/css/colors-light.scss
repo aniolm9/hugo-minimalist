@@ -1,0 +1,6 @@
+@import "../sass/colors";
+
+:root {
+  @include colors;
+  @include light-colors;
+}

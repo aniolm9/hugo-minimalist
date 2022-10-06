@@ -1,0 +1,20 @@
+<header>
+  {{ with .Site.Params.logo }}
+  <img class="img-circle" src="{{ . | absURL }}" alt="Logo">
+  {{ end }}
+
+  {{ with $.Site.Title }}
+  <h1><a href="{{ "/" | absURL }}">{{ . }}</a></h1>
+  {{ end }}
+
+  {{ with .Site.Params.email }}
+  <p class="addr"><i class="fa fa-envelope"></i>&nbsp;{{ . }}</p>
+  {{ end }}
+
+  <p>{{ .Site.Params.description }}</p>
+
+  {{ if .Site.Params.sidebar }}
+    {{- partial "sidebar.html" . -}}
+    {{- partial "links-mobile.html" . -}}
+  {{ end }}
+</header>

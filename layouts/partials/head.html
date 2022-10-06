@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="author" content='{{ .Site.Params.author }}'>
+
+  {{ $colors := resources.Get "css/colors-auto.scss" | resources.ExecuteAsTemplate "css/colors-auto.scss" . | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $colors.RelPermalink }}">
+  {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+  {{ with .Site.Params.logo }}
+  <link rel="preload" href="{{ . | absURL}}" as="image">
+  {{ end }}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  {{ with .Site.Params.favicon }}
+  <link rel="icon" type="image/ico" href="{{ . | absURL }}">
+  {{ end }}
+
+  {{ $script := resources.Get "js/scale.fix.js" }}
+  <script async src="{{ $script.RelPermalink }}"></script>
+</head>
