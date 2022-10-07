@@ -1,0 +1,28 @@
+title = "Minimalist"
+baseURL = "https://example.com"
+theme = "hugo-minimalist"
+
+[params]
+  author = "Aniol Martí"
+  description = "A minimalist personal theme for Hugo."
+  favicon = "favicon.ico"
+  logo = "/img/logo.png"
+
+  [params.footer]
+    text = "By Aniol Martí"
+    url = "https://github.com/aniolm9/hugo-minimalist"
+
+  [[params.sidebar]]
+    name = "Google Scholar"
+    icon = "ai ai-google-scholar"
+    link = "https://scholar.google.com/"
+
+  [[params.sidebar]]
+    name = "GitHub"
+    icon = "fa-brands fa-github"
+    link = "https://github.com/"
+
+  [[params.sidebar]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    link = "https://twitter.com/"
