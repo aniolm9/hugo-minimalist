@@ -12,7 +12,7 @@
 
   <ul class="link">
     {{ range $platform := .Site.Params.sidebar }}
-    <li><a class="{{ $platform.icon }}"></a><a href="{{ $platform.link }}">&nbsp;{{ $platform.name }}</a></li>
+    <li><a href="{{ $platform.link }}"><span class="{{ $platform.icon }}"></span>&nbsp;{{ $platform.name }}</a></li>
     {{ end }}
   </ul>
 </div>

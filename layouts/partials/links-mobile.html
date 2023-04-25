@@ -12,7 +12,7 @@
 
   {{ $len := (len .Site.Params.sidebar) }}
   {{ range $idx, $platform := .Site.Params.sidebar }}
-  <nobr><a class="{{ $platform.icon }}"></a><a href="{{ $platform.link }}" rel="me">&nbsp;{{ $platform.name }}</a>
+  <nobr><a href="{{ $platform.link }}" rel="me"><span class="{{ $platform.icon }}"></span>&nbsp;{{ $platform.name }}</a>
   {{ if ne (add $idx 1) $len }}<span style="margin-left: 6px;"></span>{{ end }}</nobr>
   {{ end }}
 </div>
