@@ -26,3 +26,13 @@ theme = "hugo-minimalist"
     name = "Twitter"
     icon = "fab fa-twitter"
     link = "https://twitter.com/"
+
+  [[params.menu]]
+    name = "Home"
+    # icon = "fa fa-home"
+    link = "/"
+
+  [[params.menu]]
+    name = "Another Page"
+    # icon = "fa fa-file"
+    link = "/another-page"

@@ -13,6 +13,11 @@
 
   <p>{{ .Site.Params.description }}</p>
 
+  {{ if .Site.Params.menu }}
+    {{- partial "menu.html" . -}}
+    {{- partial "menu-mobile.html" . -}}
+  {{ end }}
+
   {{ if .Site.Params.sidebar }}
     {{- partial "sidebar.html" . -}}
     {{- partial "links-mobile.html" . -}}

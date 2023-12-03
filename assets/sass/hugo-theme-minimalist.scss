@@ -75,6 +75,14 @@ ul.link:last-child {
   margin-bottom: 6px;
 }
 
+ul.link a.menu-active {
+  color: var(--clr-a-text-hvr);
+}
+
+#link-wrapper-mobile a.menu-active {
+  color: var(--clr-a-text-hvr);
+}
+
 .wrapper {
   width:860px;
   margin: 0 auto;
@@ -289,6 +297,10 @@ footer {
 @media print, screen and (min-width: 961px) {
   .link-wrapper-mobile {
     display: none !important;
+  }
+
+  .link-wrapper {
+    margin-bottom: 20px;
   }
 }
 

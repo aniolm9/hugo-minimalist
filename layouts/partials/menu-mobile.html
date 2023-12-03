@@ -10,9 +10,10 @@
     }
   </style>
 
-  {{ $len := (len .Site.Params.sidebar) }}
-  {{ range $idx, $platform := .Site.Params.sidebar }}
-  <nobr><a href="{{ $platform.link }}" rel="me"><span class="{{ $platform.icon }}"></span>&nbsp;{{ $platform.name }}</a>
+  {{ $current := . }}
+  {{ $len := (len .Site.Params.menu) }}
+  {{ range $idx, $menu := .Site.Params.menu }}
+  <nobr><a class='{{ if eq (trim $current.RelPermalink "/") ( trim $menu.link "/" ) }}menu-active{{ end }}' href="{{ $menu.link }}" rel="me"><span class="{{ $menu.icon }}"></span>&nbsp;{{ $menu.name }}</a>
   {{ if ne (add $idx 1) $len }}<span style="margin-left: 6px;"></span>{{ end }}</nobr>
   {{ end }}
 </div>
